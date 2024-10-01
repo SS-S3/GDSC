@@ -1,0 +1,87 @@
+.ic1 {
+    grid-area: draw;
+    background-color:skyblue;
+    padding: 15pt;
+    border-radius: 15px 0px 0px ;
+    font-size: 35px;
+}
+
+.cnt {
+    grid-area: count;
+    background-color: yellowgreen;
+    padding: 15px;
+}
+
+.ic2 {
+    grid-area: off;
+    background-color:darkkhaki;
+    border-radius: 0px 15px 0px 0px;
+    
+}
+
+.img {
+    display: flex;
+    grid-area: image;
+    background-color: lightblue;
+    justify-items:baseline;
+    background-image: url( "/Users/soumyashekhar/Documents/profile.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items:end;
+    justify-content: right;
+
+
+
+}
+.wrk {
+    grid-area: work;
+    background-color: violet;
+    padding: 10px;
+    background-image: linear-gradient(rgb(217, 14, 197), rgb(139, 234, 172));
+    border-radius: 0px 0px 0px 15px;
+}
+
+.f_f {
+    grid-area: fear;
+    background-color: silver;
+    border-radius: 0px 0px 15px 0px;
+    font-size: 35px;
+    text-shadow: 4px 3px greenyellow;
+}
+
+
+.border {
+    display: grid;
+    height: 80vh;
+    padding: 25px;
+    background-color: black;
+    padding: 15px;
+    grid-template-columns: repeat(9, 1fr);
+    /* 9 equal columns */
+    grid-template-rows: auto auto auto;
+    /* 3 auto-sized rows */
+    grid-template-areas:
+        'draw draw draw count count count off off off'
+        /* First row */
+        'draw draw draw image image image off off off'
+        /* Second row */
+        'work work work work work fear fear fear fear';
+    /* Third row */
+    gap: 10px;
+}
+
+
+.ic1,
+.cnt,
+.ic2,
+.wrk,
+.f_f {
+    display: flex;
+    justify-content: center;
+    /* Horizontally center */
+    align-items: center;
+    /* Vertically center */
+    text-align: center;
+    /* Ensures text is centered within the flexbox */
+}
